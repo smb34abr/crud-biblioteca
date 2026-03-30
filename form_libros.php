@@ -312,16 +312,16 @@
 
                   <div class="form-group">
                   <label for="titulo">Título</label>
-                  <input type="text" name="titulo" id="titulo" class="form-control" requered>
+                  <input type="text" name="titulo" id="titulo" class="form-control">
                 </div>
 
                 <div class="form-group">
                   <label for="isbn">ISBN</label>
-                  <input type="text" name="isbn" id="isbn" class="form-control" pattern>
+                  <input type="text" name="isbn" id="isbn" class="form-control">
                 </div>
                 <div class="form-group col-md-4">
                   <label for="fecha_publicacion">Fecha de publicación</label>
-                  <input type="date" name="fecha_publicacion" id="fecha_publicacion" class="form-control">
+                  <input type="numero" name="fecha_publicacion" id="fecha_publicacion" class="form-control">
                 </div>
 
                 <div class="form-group col-md-3">

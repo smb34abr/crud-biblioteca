@@ -1,269 +1,280 @@
 <!doctype html>
-<html lang="eS" data-pc-preset="preset-1" data-pc-sidebar-caption="true" data-pc-direction="ltr" dir="ltr" data-pc-theme="light">
+<html lang="es" data-pc-preset="preset-1" data-pc-sidebar-caption="true" data-pc-direction="ltr" dir="ltr"
+  data-pc-theme="light">
 
 <!-- [Head] start -->
+
 <head>
-    <?php
-    require_once "include/head.php";
-    include_once "config/conexion.php";
-    ?>
+  <?php
+  require_once "include/head.php";
+  include_once "config/conexion.php";
+  ?>
 </head>
 <!-- [Head] end -->
 
 <!-- [Body] Start -->
+
 <body>
   <!-- [ Pre-loader ] start -->
-<div class="loader-bg fixed inset-0 bg-white dark:bg-themedark-cardbg z-[1034]">
-  <div class="loader-track h-[5px] w-full inline-block absolute overflow-hidden top-0">
-    <div class="loader-fill w-[300px] h-[5px] bg-primary-500 absolute top-0 left-0 animate-[hitZak_0.6s_ease-in-out_infinite_alternate]"></div>
+  <div class="loader-bg fixed inset-0 bg-white dark:bg-themedark-cardbg z-[1034]">
+    <div class="loader-track h-[5px] w-full inline-block absolute overflow-hidden top-0">
+      <div
+        class="loader-fill w-[300px] h-[5px] bg-primary-500 absolute top-0 left-0 animate-[hitZak_0.6s_ease-in-out_infinite_alternate]">
+      </div>
+    </div>
   </div>
-</div>
-<!-- [ Pre-loader ] End -->
+  <!-- [ Pre-loader ] End -->
 
- <!-- [ Sidebar Menu ] start -->
-<?php require_once "include/menu.php"; ?>
-<!-- [ Sidebar Menu ] end -->
+  <!-- [ Sidebar Menu ] start -->
+  <?php require_once "include/menu.php"; ?>
+  <!-- [ Sidebar Menu ] end -->
 
- <!-- [ Header Topbar ] start -->
-<header class="pc-header">
-  <div class="header-wrapper flex max-sm:px-[15px] px-[25px] grow"><!-- [Mobile Media Block] start -->
+  <!-- [ Header Topbar ] start -->
+  <header class="pc-header">
+    <div class="header-wrapper flex max-sm:px-[15px] px-[25px] grow"><!-- [Mobile Media Block] start -->
 
-<div class="me-auto pc-mob-drp">
-  <ul class="inline-flex *:min-h-header-height *:inline-flex *:items-center">
-    <!-- ======= Menu collapse Icon ===== -->
-    <li class="pc-h-item pc-sidebar-collapse max-lg:hidden lg:inline-flex">
-      <a href="#" class="pc-head-link ltr:!ml-0 rtl:!mr-0" id="sidebar-hide">
-        <i data-feather="menu"></i>
-      </a>
-    </li>
-    <li class="pc-h-item pc-sidebar-popup lg:hidden">
-      <a href="#" class="pc-head-link ltr:!ml-0 rtl:!mr-0" id="mobile-collapse">
-        <i data-feather="menu"></i>
-      </a>
-    </li>
-  </ul>
-</div>
-
-<!-- [Mobile Media Block end] -->
-<div class="ms-auto">
-  <ul class="inline-flex *:min-h-header-height *:inline-flex *:items-center">
-    <li class="dropdown pc-h-item">
-      <a class="pc-head-link dropdown-toggle me-0" data-pc-toggle="dropdown" href="#" role="button"
-        aria-haspopup="false" aria-expanded="false">
-        <i data-feather="sun"></i>
-      </a>
-      <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
-        <a href="#!" class="dropdown-item" onclick="layout_change('dark')">
-          <i data-feather="moon"></i>
-          <span>Dark</span>
-        </a>
-        <a href="#!" class="dropdown-item" onclick="layout_change('light')">
-          <i data-feather="sun"></i>
-          <span>Light</span>
-        </a>
-        <a href="#!" class="dropdown-item" onclick="layout_change_default()">
-          <i data-feather="settings"></i>
-          <span>Default</span>
-        </a>
+      <div class="me-auto pc-mob-drp">
+        <ul class="inline-flex *:min-h-header-height *:inline-flex *:items-center">
+          <!-- ======= Menu collapse Icon ===== -->
+          <li class="pc-h-item pc-sidebar-collapse max-lg:hidden lg:inline-flex">
+            <a href="#" class="pc-head-link ltr:!ml-0 rtl:!mr-0" id="sidebar-hide">
+              <i data-feather="menu"></i>
+            </a>
+          </li>
+          <li class="pc-h-item pc-sidebar-popup lg:hidden">
+            <a href="#" class="pc-head-link ltr:!ml-0 rtl:!mr-0" id="mobile-collapse">
+              <i data-feather="menu"></i>
+            </a>
+          </li>
+        </ul>
       </div>
-    </li>
-    <li class="dropdown pc-h-item">
-      <a class="pc-head-link dropdown-toggle me-0" data-pc-toggle="dropdown" href="#" role="button"
-        aria-haspopup="false" aria-expanded="false">
-        <i data-feather="settings"></i>
-      </a>
-      <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
-        <a href="#!" class="dropdown-item">
-          <i class="ti ti-user"></i>
-          <span>My Account</span>
-        </a>
-        <a href="#!" class="dropdown-item">
-          <i class="ti ti-settings"></i>
-          <span>Settings</span>
-        </a>
-        <a href="#!" class="dropdown-item">
-          <i class="ti ti-headset"></i>
-          <span>Support</span>
-        </a>
-        <a href="#!" class="dropdown-item">
-          <i class="ti ti-lock"></i>
-          <span>Lock Screen</span>
-        </a>
-        <a href="#!" class="dropdown-item">
-          <i class="ti ti-power"></i>
-          <span>Logout</span>
-        </a>
-      </div>
-    </li>
-    <li class="dropdown pc-h-item">
-      <a class="pc-head-link dropdown-toggle me-0" data-pc-toggle="dropdown" href="#" role="button"
-        aria-haspopup="false" aria-expanded="false">
-        <i data-feather="bell"></i>
-        <span class="badge bg-success-500 text-white rounded-full z-10 absolute right-0 top-0">3</span>
-      </a>
-      <div class="dropdown-menu dropdown-notification dropdown-menu-end pc-h-dropdown p-2">
-        <div class="dropdown-header flex items-center justify-between py-4 px-5">
-          <h5 class="m-0">Notifications</h5>
-          <a href="#!" class="btn btn-link btn-sm">Mark all read</a>
-        </div>
-        <div class="dropdown-body header-notification-scroll relative py-4 px-5"
-          style="max-height: calc(100vh - 215px)">
-          <p class="text-span mb-3">Today</p>
-          <div class="card mb-2">
-            <div class="card-body">
-              <div class="flex gap-4">
-                <div class="shrink-0">
-                  <img class="img-radius w-12 h-12 rounded-0" src="assets/images/user/avatar-1.jpg" alt="Generic placeholder image" />
-                </div>
-                <div class="grow">
-                  <span class="float-end text-sm text-muted">2 min ago</span>
-                  <h5 class="text-body mb-2">UI/UX Design</h5>
-                  <p class="mb-0">
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of
-                    type and scrambled it to make a type
-                  </p>
-                </div>
-              </div>
+
+      <!-- [Mobile Media Block end] -->
+      <div class="ms-auto">
+        <ul class="inline-flex *:min-h-header-height *:inline-flex *:items-center">
+          <li class="dropdown pc-h-item">
+            <a class="pc-head-link dropdown-toggle me-0" data-pc-toggle="dropdown" href="#" role="button"
+              aria-haspopup="false" aria-expanded="false">
+              <i data-feather="sun"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
+              <a href="#!" class="dropdown-item" onclick="layout_change('dark')">
+                <i data-feather="moon"></i>
+                <span>Dark</span>
+              </a>
+              <a href="#!" class="dropdown-item" onclick="layout_change('light')">
+                <i data-feather="sun"></i>
+                <span>Light</span>
+              </a>
+              <a href="#!" class="dropdown-item" onclick="layout_change_default()">
+                <i data-feather="settings"></i>
+                <span>Default</span>
+              </a>
             </div>
-          </div>
-          <div class="card mb-2">
-            <div class="card-body">
-              <div class="flex gap-4">
-                <div class="shrink-0">
-                  <img class="img-radius w-12 h-12 rounded-0" src="assets/images/user/avatar-2.jpg" alt="Generic placeholder image" />
-                </div>
-                <div class="grow">
-                  <span class="float-end text-sm text-muted">1 hour ago</span>
-                  <h5 class="text-body mb-2">Message</h5>
-                  <p class="mb-0">Lorem Ipsum has been the industry's standard dummy text ever since the 1500.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="text-span mb-3 mt-4">Yesterday</p>
-          <div class="card mb-2">
-            <div class="card-body">
-              <div class="flex gap-4">
-                <div class="shrink-0">
-                  <img class="img-radius w-12 h-12 rounded-0" src="assets/images/user/avatar-3.jpg" alt="Generic placeholder image" />
-                </div>
-                <div class="grow ms-3">
-                  <span class="float-end text-sm text-muted">2 hour ago</span>
-                  <h5 class="text-body mb-2">Forms</h5>
-                  <p class="mb-0">
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of
-                    type and scrambled it to make a type
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-2">
-            <div class="card-body">
-              <div class="flex gap-4">
-                <div class="shrink-0">
-                  <img class="img-radius w-12 h-12 rounded-0" src="assets/images/user/avatar-4.jpg" alt="Generic placeholder image" />
-                </div>
-                <div class="grow ms-3">
-                  <span class="float-end text-sm text-muted">12 hour ago</span>
-                  <h5 class="text-body mb-2">Challenge invitation</h5>
-                  <p class="mb-2">
-                    <strong>Jonny aber</strong>
-                    invites to join the challenge
-                  </p>
-                  <button class="btn btn-sm btn-outline-secondary me-2">Decline</button>
-                  <button class="btn btn-sm btn-primary">Accept</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card mb-2">
-            <div class="card-body">
-              <div class="flex gap-4">
-                <div class="shrink-0">
-                  <img class="img-radius w-12 h-12 rounded-0" src="assets/images/user/avatar-5.jpg" alt="Generic placeholder image" />
-                </div>
-                <div class="grow ms-3">
-                  <span class="float-end text-sm text-muted">5 hour ago</span>
-                  <h5 class="text-body mb-2">Security</h5>
-                  <p class="mb-0">
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of
-                    type and scrambled it to make a type
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center py-2">
-          <a href="#!" class="text-danger-500 hover:text-danger-600 focus:text-danger-600 active:text-danger-600">
-            Clear all Notifications
-          </a>
-        </div>
-      </div>
-    </li>
-    <li class="dropdown pc-h-item header-user-profile">
-      <a class="pc-head-link dropdown-toggle arrow-none me-0" data-pc-toggle="dropdown" href="#" role="button"
-        aria-haspopup="false" data-pc-auto-close="outside" aria-expanded="false">
-        <i data-feather="user"></i>
-      </a>
-      <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown p-2 overflow-hidden">
-        <div class="dropdown-header flex items-center justify-between py-4 px-5 bg-primary-500">
-          <div class="flex mb-1 items-center">
-            <div class="shrink-0">
-              <img src="assets/images/user/avatar-2.jpg" alt="user-image" class="w-10 rounded-full" />
-            </div>
-            <div class="grow ms-3">
-              <h6 class="mb-1 text-white">Carson Darrin 🖖</h6>
-              <span class="text-white">carson.darrin@company.io</span>
-            </div>
-          </div>
-        </div>
-        <div class="dropdown-body py-4 px-5">
-          <div class="profile-notification-scroll position-relative" style="max-height: calc(100vh - 225px)">
-            <a href="#" class="dropdown-item">
-              <span>
-                <svg class="pc-icon text-muted me-2 inline-block">
-                  <use xlink:href="#custom-setting-outline"></use>
-                </svg>
+          </li>
+          <li class="dropdown pc-h-item">
+            <a class="pc-head-link dropdown-toggle me-0" data-pc-toggle="dropdown" href="#" role="button"
+              aria-haspopup="false" aria-expanded="false">
+              <i data-feather="settings"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
+              <a href="#!" class="dropdown-item">
+                <i class="ti ti-user"></i>
+                <span>My Account</span>
+              </a>
+              <a href="#!" class="dropdown-item">
+                <i class="ti ti-settings"></i>
                 <span>Settings</span>
-              </span>
-            </a>
-            <a href="#" class="dropdown-item">
-              <span>
-                <svg class="pc-icon text-muted me-2 inline-block">
-                  <use xlink:href="#custom-share-bold"></use>
-                </svg>
-                <span>Share</span>
-              </span>
-            </a>
-            <a href="#" class="dropdown-item">
-              <span>
-                <svg class="pc-icon text-muted me-2 inline-block">
-                  <use xlink:href="#custom-lock-outline"></use>
-                </svg>
-                <span>Change Password</span>
-              </span>
-            </a>
-            <div class="grid my-3">
-              <button class="btn btn-primary flex items-center justify-center">
-                <svg class="pc-icon me-2 w-[22px] h-[22px]">
-                  <use xlink:href="#custom-logout-1-outline"></use>
-                </svg>
-                Logout
-              </button>
+              </a>
+              <a href="#!" class="dropdown-item">
+                <i class="ti ti-headset"></i>
+                <span>Support</span>
+              </a>
+              <a href="#!" class="dropdown-item">
+                <i class="ti ti-lock"></i>
+                <span>Lock Screen</span>
+              </a>
+              <a href="#!" class="dropdown-item">
+                <i class="ti ti-power"></i>
+                <span>Logout</span>
+              </a>
             </div>
-          </div>
-        </div>
+          </li>
+          <li class="dropdown pc-h-item">
+            <a class="pc-head-link dropdown-toggle me-0" data-pc-toggle="dropdown" href="#" role="button"
+              aria-haspopup="false" aria-expanded="false">
+              <i data-feather="bell"></i>
+              <span class="badge bg-success-500 text-white rounded-full z-10 absolute right-0 top-0">3</span>
+            </a>
+            <div class="dropdown-menu dropdown-notification dropdown-menu-end pc-h-dropdown p-2">
+              <div class="dropdown-header flex items-center justify-between py-4 px-5">
+                <h5 class="m-0">Notifications</h5>
+                <a href="#!" class="btn btn-link btn-sm">Mark all read</a>
+              </div>
+              <div class="dropdown-body header-notification-scroll relative py-4 px-5"
+                style="max-height: calc(100vh - 215px)">
+                <p class="text-span mb-3">Today</p>
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <div class="flex gap-4">
+                      <div class="shrink-0">
+                        <img class="img-radius w-12 h-12 rounded-0" src="assets/images/user/avatar-1.jpg"
+                          alt="Generic placeholder image" />
+                      </div>
+                      <div class="grow">
+                        <span class="float-end text-sm text-muted">2 min ago</span>
+                        <h5 class="text-body mb-2">UI/UX Design</h5>
+                        <p class="mb-0">
+                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                          printer took a galley of
+                          type and scrambled it to make a type
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <div class="flex gap-4">
+                      <div class="shrink-0">
+                        <img class="img-radius w-12 h-12 rounded-0" src="assets/images/user/avatar-2.jpg"
+                          alt="Generic placeholder image" />
+                      </div>
+                      <div class="grow">
+                        <span class="float-end text-sm text-muted">1 hour ago</span>
+                        <h5 class="text-body mb-2">Message</h5>
+                        <p class="mb-0">Lorem Ipsum has been the industry's standard dummy text ever since the 1500.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-span mb-3 mt-4">Yesterday</p>
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <div class="flex gap-4">
+                      <div class="shrink-0">
+                        <img class="img-radius w-12 h-12 rounded-0" src="assets/images/user/avatar-3.jpg"
+                          alt="Generic placeholder image" />
+                      </div>
+                      <div class="grow ms-3">
+                        <span class="float-end text-sm text-muted">2 hour ago</span>
+                        <h5 class="text-body mb-2">Forms</h5>
+                        <p class="mb-0">
+                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                          printer took a galley of
+                          type and scrambled it to make a type
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <div class="flex gap-4">
+                      <div class="shrink-0">
+                        <img class="img-radius w-12 h-12 rounded-0" src="assets/images/user/avatar-4.jpg"
+                          alt="Generic placeholder image" />
+                      </div>
+                      <div class="grow ms-3">
+                        <span class="float-end text-sm text-muted">12 hour ago</span>
+                        <h5 class="text-body mb-2">Challenge invitation</h5>
+                        <p class="mb-2">
+                          <strong>Jonny aber</strong>
+                          invites to join the challenge
+                        </p>
+                        <button class="btn btn-sm btn-outline-secondary me-2">Decline</button>
+                        <button class="btn btn-sm btn-primary">Accept</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-2">
+                  <div class="card-body">
+                    <div class="flex gap-4">
+                      <div class="shrink-0">
+                        <img class="img-radius w-12 h-12 rounded-0" src="assets/images/user/avatar-5.jpg"
+                          alt="Generic placeholder image" />
+                      </div>
+                      <div class="grow ms-3">
+                        <span class="float-end text-sm text-muted">5 hour ago</span>
+                        <h5 class="text-body mb-2">Security</h5>
+                        <p class="mb-0">
+                          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                          printer took a galley of
+                          type and scrambled it to make a type
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center py-2">
+                <a href="#!" class="text-danger-500 hover:text-danger-600 focus:text-danger-600 active:text-danger-600">
+                  Clear all Notifications
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown pc-h-item header-user-profile">
+            <a class="pc-head-link dropdown-toggle arrow-none me-0" data-pc-toggle="dropdown" href="#" role="button"
+              aria-haspopup="false" data-pc-auto-close="outside" aria-expanded="false">
+              <i data-feather="user"></i>
+            </a>
+            <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown p-2 overflow-hidden">
+              <div class="dropdown-header flex items-center justify-between py-4 px-5 bg-primary-500">
+                <div class="flex mb-1 items-center">
+                  <div class="shrink-0">
+                    <img src="assets/images/user/avatar-2.jpg" alt="user-image" class="w-10 rounded-full" />
+                  </div>
+                  <div class="grow ms-3">
+                    <h6 class="mb-1 text-white">Carson Darrin 🖖</h6>
+                    <span class="text-white">carson.darrin@company.io</span>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-body py-4 px-5">
+                <div class="profile-notification-scroll position-relative" style="max-height: calc(100vh - 225px)">
+                  <a href="#" class="dropdown-item">
+                    <span>
+                      <svg class="pc-icon text-muted me-2 inline-block">
+                        <use xlink:href="#custom-setting-outline"></use>
+                      </svg>
+                      <span>Settings</span>
+                    </span>
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    <span>
+                      <svg class="pc-icon text-muted me-2 inline-block">
+                        <use xlink:href="#custom-share-bold"></use>
+                      </svg>
+                      <span>Share</span>
+                    </span>
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    <span>
+                      <svg class="pc-icon text-muted me-2 inline-block">
+                        <use xlink:href="#custom-lock-outline"></use>
+                      </svg>
+                      <span>Change Password</span>
+                    </span>
+                  </a>
+                  <div class="grid my-3">
+                    <button class="btn btn-primary flex items-center justify-center">
+                      <svg class="pc-icon me-2 w-[22px] h-[22px]">
+                        <use xlink:href="#custom-logout-1-outline"></use>
+                      </svg>
+                      Logout
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-    </li>
-  </ul>
-</div></div>
-</header>
-<!-- [ Header ] end -->
+    </div>
+  </header>
+  <!-- [ Header ] end -->
 
   <!-- [ Main Content ] start -->
   <div class="pc-container">
@@ -271,7 +282,7 @@
       <!-- [ breadcrumb ] start -->
       <div class="page-header">
         <div class="page-block">
-            <!--
+          <!--
           <div class="page-header-title mb-5">
             <h5 class="mb-0 font-medium">Relación de libros</h5>
           </div>
@@ -293,82 +304,80 @@
             <div class="card-header flex justify-between items-center">
               <h3>Relación de Libros</h3>
               <a href="form_libros.php" class="btn bg-primary-700 me-2">
-                  <h5 class="mb-0 font-medium" title="Nuevo libro" style="color: white;">Nuevo Libro</h5>
+                <h5 class="mb-0 font-medium" title="Nuevo libro" style="color: white;">Nuevo Libro</h5>
               </a>
             </div>
             <!-- Inicio de card-body -->
             <div class="card-body">
-                <table id="example" class="display">
-                    <thead>
-                        <tr>
-                            <th>id</th>
-                            <th>Nombre</th>
-                            <th>isbn</th>
-                            <th>Año</th>
-                            <th>Escritor</th>
-                            <th>Editorial</th>
-                            <th>Existencia</th>
-                            <th>Precio</th>
-                            <th>Acciones</th>
-                        </tr>
-                        </thead>
-                        <tbody>
+              <table id="example" class="display">
+                <thead>
+                  <tr>
+                    <th>id</th>
+                    <th>Nombre</th>
+                    <th>isbn</th>
+                    <th>Año</th>
+                    <th>Escritor</th>
+                    <th>Editorial</th>
+                    <th>Existencia</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
 
-                            <?php
-                            $sql = $conexion->query("SELECT * FROM libros
+                  <?php
+                  $sql = $conexion->query("SELECT * FROM libros
 						            INNER JOIN escritores ON libros.id_escritor = escritores.id_escritor
 						            INNER JOIN editorial ON libros.id_editorial  = editorial.id_editorial
 					            ");
-                            //WHERE libros.estado = 1
-                            while ($resultado = $sql->fetch_assoc()) { ?>
+                  //WHERE libros.estado = 1
+                  while ($resultado = $sql->fetch_assoc()) { ?>
 
-                            <tr>
-                              <td><?php echo $resultado["id_libro"]; ?></td>
-                              <td><?php echo $resultado["titulo"]; ?></td>
-                              <td><?php echo $resultado["isbn"]; ?></td>
-                              <td><?php echo $resultado[
-                                  "fecha_publicacion"
-                              ]; ?></td>
-                              <td><?php echo $resultado["nombre_escritor"] .
-                                  " " .
-                                  $resultado["apellido"]; ?></td>
-                              <td><?php echo $resultado[
-                                  "nombre_editorial"
-                              ]; ?></td>
-                              <td>
-                                <?php if ($resultado["existencias"] >= 1) {
-                                    echo "<span class='badge bg-success'>Disponible</span>";
-                                } else {
-                                    echo "<span class='badge bg-danger'>Prestado</span>";
-                                } ?>
-                              </td>
-                              <!-- <td><?php
-                                //echo $resultado["existencias"];
-                                ?></td> -->
-                              <td><?php echo '$ ' .
-                                  $resultado["precio"] .
-                                  ".00"; ?></td>
+                    <tr>
+                      <td><?php echo $resultado["id_libro"]; ?></td>
+                      <td><?php echo $resultado["titulo"]; ?></td>
+                      <td><?php echo $resultado["isbn"]; ?></td>
+                      <td><?php echo $resultado[
+                        "fecha_publicacion"
+                      ]; ?></td>
+                      <td><?php echo $resultado["nombre_escritor"] .
+                        " " .
+                        $resultado["apellido"]; ?></td>
+                      <td><?php echo $resultado[
+                        "nombre_editorial"
+                      ]; ?></td>
+                      <td>
+                        <?php if ($resultado["existencias"] >= 1) {
+                          echo "<span class='badge bg-success'>Disponible</span>";
+                        } else {
+                          echo "<span class='badge bg-danger'>Prestado</span>";
+                        } ?>
+                      </td>
+                      <!-- <td><?php
+                      //echo $resultado["existencias"];
+                      ?></td> -->
+                      <td><?php echo '$ ' .
+                        $resultado["precio"] .
+                        ".00"; ?></td>
 
-                              <td>
-                                <a href="editar_libro.php?id_libro=<?php echo $resultado[
-                                    "id_libro"
-                                ]; ?>" class="badge bg-success-700 text-white">
-                                  <i class="fa-solid fa-pencil"></i>
-                                </a>
-                                &nbsp; | &nbsp;
-                                <a href="delete_libros.php?id_libro=<?php echo $resultado[
-                                    "id_libro"
-                                ]; ?>" class="badge bg-danger-600 text-white">
-                                  <i class="fa-solid fa-trash"></i>
-                                </a>
-                              </td
-                            </tr>
+                      <td>
+                        <a href="editar_libro.php?id_libro=<?php echo $resultado["id_libro"]; ?>" 
+                        class="badge bg-success-700 text-white">
+                          <i class="fa-solid fa-pencil"></i>
+                        </a>
+                        &nbsp; | &nbsp;
+                        <a href="delete_libros.php?id_libro=<?php echo $resultado[
+                          "id_libro"
+                        ]; ?>" class="badge bg-danger-600 text-white">
+                          <i class="fa-solid fa-trash"></i>
+                        </a>
+                      </td </tr>
 
-                            <?php }
-                            ?>
+                    <?php }
+                  ?>
 
-                        </tbody>
-                </table>
+                </tbody>
+              </table>
             </div><!-- Fin de card-body -->
 
           </div>
@@ -389,19 +398,22 @@
       <div class="grid grid-cols-12 gap-1.5">
         <div class="col-span-12 sm:col-span-6 my-1">
           <p class="m-0"></p>
-            <a href="https://codedthemes.com/" class="text-theme-bodycolor dark:text-themedark-bodycolor hover:text-primary-500 dark:hover:text-primary-500" target="_blank">NegroSoft</a>
-            , Creado con ♥ para una presencia web más fluida.
+          <a href="https://codedthemes.com/"
+            class="text-theme-bodycolor dark:text-themedark-bodycolor hover:text-primary-500 dark:hover:text-primary-500"
+            target="_blank">NegroSoft</a>
+          , Creado con ♥ para una presencia web más fluida.
           </p>
         </div>
         <div class="col-span-12 sm:col-span-6 my-1 justify-self-end">
-                 <p class="inline-block max-sm:mr-3 sm:ml-2">Realizado por <a href="https://bera.com.mx" target="_blank">NegroSoft</a></p>
+          <p class="inline-block max-sm:mr-3 sm:ml-2">Realizado por <a href="https://bera.com.mx"
+              target="_blank">NegroSoft</a></p>
         </div>
       </div>
     </div>
   </footer>
 
- <!-- Required Js -->
- <?php require_once "include/footer.php"; ?>
+  <!-- Required Js -->
+  <?php require_once "include/footer.php"; ?>
 
 </body>
 <!-- [Body] end -->
