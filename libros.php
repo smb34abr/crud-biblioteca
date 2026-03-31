@@ -303,9 +303,15 @@
           <div class="card">
             <div class="card-header flex justify-between items-center">
               <h3>Relación de Libros</h3>
-              <a href="form_libros.php" class="btn bg-primary-700 me-2">
+              <!-- <a href="form_libros.php" class="btn bg-primary-700 me-2">
                 <h5 class="mb-0 font-medium" title="Nuevo libro" style="color: white;">Nuevo Libro</h5>
-              </a>
+              </a> -->              
+                <button class=" btn bg-primary-700 me-2" style="color: white;" onclick="formulario()">
+                   Nuevo Libro
+                </button>
+
+                
+              
             </div>
             <!-- Inicio de card-body -->
             <div class="card-body">
@@ -414,6 +420,45 @@
 
   <!-- Required Js -->
   <?php require_once "include/footer.php"; ?>
+
+  
+  <script>
+      //alert("Hola es una prueba de que esto funciona..");
+
+      async function formulario() {
+    const { value: formValues } = await Swal.fire({
+        title: 'Nuevo libro',
+        html:
+            '<input id="swal-input1" class="swal2-input" placeholder="Nombre del libro">' +
+            '<input id="swal-input1" class="swal2-input" placeholder="ISBN">' +
+            '<input id="swal-input2" class="swal2-input" type="password" placeholder="ISBN">',
+        focusConfirm: false,
+        showCancelButton: true,
+        confirmButtonText: 'Entrar',
+        cancelButtonText: 'Cancelar',
+        // Pre-procesar los datos antes de cerrar la alerta
+        preConfirm: () => {
+            return [
+                document.getElementById('swal-input1').value,
+                document.getElementById('swal-input2').value
+            ]
+        }
+    });
+
+    // Validar y usar los datos
+    if (formValues) {
+        if(formValues[0] === "" || formValues[1] === ""){
+            Swal.showValidationMessage('Por favor rellena ambos campos');
+            return false;
+        }
+        Swal.fire(JSON.stringify(formValues)); // Muestra los datos ingresados
+    }
+}
+
+// Llamar a la función (ej. al hacer clic en un botón)
+// mostrarFormulario();
+
+  </script>
 
 </body>
 <!-- [Body] end -->

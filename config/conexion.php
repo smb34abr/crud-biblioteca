@@ -1,15 +1,16 @@
 <?php
-
+/*
 $hostname = "192.168.0.100";
 $username = "abernal";
 $password = "cThoa#nou4";
 $dbname = "biblioteca";
-/*
+*/
 $hostname = "localhost";
 $username = "root";
 $password = "";
 $dbname = "biblioteca";
 
+/*
 
 $hostname = "192.168.0.19";
 $username = "root";

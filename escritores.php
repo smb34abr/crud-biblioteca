@@ -303,8 +303,8 @@
            -->
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                        <!--<li class="breadcrumb-item"><a href="javascript: void(0)">Other</a></li>-->
-                        <li class="breadcrumb-item" aria-current="page"><b>Relación de libros</b></li>
+                        <!-- <li class="breadcrumb-item"><a href="javascript: void(0)">escritores</a></li> -->
+                        <li class="breadcrumb-item" aria-current="page"><b>Relación de escritores</b></li>
                     </ul>
                 </div>
             </div>
@@ -317,7 +317,7 @@
                     <div class="card">
                         <div class="card-header flex justify-between items-center">
                             <h3>Relación de escritores</h3>
-                            <a href="form_libros.php" class="btn bg-primary-700 me-2">
+                            <a href="form_escritor.php" class="btn bg-primary-700 me-2">
                                 <h5 class="mb-0 font-medium" title="Nuevo libro" style="color: white;">Nuevo Escritor
                                 </h5>
                             </a>
