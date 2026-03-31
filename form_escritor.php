@@ -3,11 +3,13 @@
   data-pc-theme="light">
 
 <!-- [Head] start -->
+
 <head>
   <?php
   include_once "include/head.php";
   include_once "config/conexion.php";
   ?>
+
 </head>
 <!-- [Head] end -->
 
@@ -46,12 +48,23 @@
               <i data-feather="menu"></i>
             </a>
           </li>
+          <li class="dropdown pc-h-item">
+            <a class="pc-head-link dropdown-toggle me-0" data-pc-toggle="dropdown" href="#" role="button"
+              aria-haspopup="false" aria-expanded="false">
+              <i data-feather="search"></i>
+            </a>
+            <div class="dropdown-menu pc-h-dropdown drp-search">
+              <form class="px-2 py-1">
+                <input type="search" class="form-control !border-0 !shadow-none" placeholder="Search here. . ." />
+              </form>
+            </div>
+          </li>
         </ul>
       </div>
       <!-- [Mobile Media Block end] -->
 
       <div class="ms-auto">
-        <ul class="inline-flex *:min-h-header-height *:inline-flex *:items-center">
+        <!-- <ul class="inline-flex *:min-h-header-height *:inline-flex *:items-center">
     <li class="dropdown pc-h-item">
       <a class="pc-head-link dropdown-toggle me-0" data-pc-toggle="dropdown" href="#" role="button"
         aria-haspopup="false" aria-expanded="false">
@@ -72,6 +85,7 @@
         </a>
       </div>
     </li>
+
     <li class="dropdown pc-h-item">
       <a class="pc-head-link dropdown-toggle me-0" data-pc-toggle="dropdown" href="#" role="button"
         aria-haspopup="false" aria-expanded="false">
@@ -119,7 +133,7 @@
             <div class="card-body">
               <div class="flex gap-4">
                 <div class="shrink-0">
-                  <img class="img-radius w-12 h-12 rounded-0" src="./assets/images/user/avatar-1.jpg" alt="Generic placeholder image" />
+                  <img class="img-radius w-12 h-12 rounded-0" src="../assets/images/user/avatar-1.jpg" alt="Generic placeholder image" />
                 </div>
                 <div class="grow">
                   <span class="float-end text-sm text-muted">2 min ago</span>
@@ -137,7 +151,7 @@
             <div class="card-body">
               <div class="flex gap-4">
                 <div class="shrink-0">
-                  <img class="img-radius w-12 h-12 rounded-0" src="./assets/images/user/avatar-2.jpg" alt="Generic placeholder image" />
+                  <img class="img-radius w-12 h-12 rounded-0" src="../assets/images/user/avatar-2.jpg" alt="Generic placeholder image" />
                 </div>
                 <div class="grow">
                   <span class="float-end text-sm text-muted">1 hour ago</span>
@@ -152,7 +166,7 @@
             <div class="card-body">
               <div class="flex gap-4">
                 <div class="shrink-0">
-                  <img class="img-radius w-12 h-12 rounded-0" src="./assets/images/user/avatar-3.jpg" alt="Generic placeholder image" />
+                  <img class="img-radius w-12 h-12 rounded-0" src="../assets/images/user/avatar-3.jpg" alt="Generic placeholder image" />
                 </div>
                 <div class="grow ms-3">
                   <span class="float-end text-sm text-muted">2 hour ago</span>
@@ -170,7 +184,7 @@
             <div class="card-body">
               <div class="flex gap-4">
                 <div class="shrink-0">
-                  <img class="img-radius w-12 h-12 rounded-0" src="./assets/images/user/avatar-4.jpg" alt="Generic placeholder image" />
+                  <img class="img-radius w-12 h-12 rounded-0" src="../assets/images/user/avatar-4.jpg" alt="Generic placeholder image" />
                 </div>
                 <div class="grow ms-3">
                   <span class="float-end text-sm text-muted">12 hour ago</span>
@@ -189,7 +203,7 @@
             <div class="card-body">
               <div class="flex gap-4">
                 <div class="shrink-0">
-                  <img class="img-radius w-12 h-12 rounded-0" src="./assets/images/user/avatar-5.jpg" alt="Generic placeholder image" />
+                  <img class="img-radius w-12 h-12 rounded-0" src="../assets/images/user/avatar-5.jpg" alt="Generic placeholder image" />
                 </div>
                 <div class="grow ms-3">
                   <span class="float-end text-sm text-muted">5 hour ago</span>
@@ -221,7 +235,7 @@
         <div class="dropdown-header flex items-center justify-between py-4 px-5 bg-primary-500">
           <div class="flex mb-1 items-center">
             <div class="shrink-0">
-              <img src="./assets/images/user/avatar-2.jpg" alt="user-image" class="w-10 rounded-full" />
+              <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="w-10 rounded-full" />
             </div>
             <div class="grow ms-3">
               <h6 class="mb-1 text-white">Carson Darrin 🖖</h6>
@@ -268,7 +282,7 @@
       </div>
     </li>
 
-  </ul>
+  </ul> -->
 
       </div>
     </div>
@@ -284,18 +298,19 @@
       <div class="page-header">
         <div class="page-block">
           <div class="page-header-title">
-            <!-- <a href="">
-              <h4 class="mb-0 font-medium mb-3" title="Nuevo libro"> <i data-feather="plus"></i></h4>
-            </a> -->
+            <a href="">
+              <!-- <h4 class="mb-0 font-medium mb-3" title="Nuevo escritor"> <i data-feather="plus"></i></h4> -->
+            </a>
           </div>
           <ul class="breadcrumb">
             <li class="breadcrumb-item"><a href="dashboard.php">Dashboard</a></li>
-            <li class="breadcrumb-item"><a href="libros.php">Libros</a></li>
-            <li class="breadcrumb-item" aria-current="page">Nuevo libro</li>
+            <li class="breadcrumb-item"><a href="escritores.php">Escritores</a></li>
+            <li class="breadcrumb-item" aria-current="page">Nuevo escritor</li>
           </ul>
         </div>
       </div>
       <!-- [ breadcrumb ] end -->
+
 
       <!-- [ Main Content ] start -->
 
@@ -304,84 +319,31 @@
         <div class="col-span-12">
           <div class="card">
             <div class="card-header">
-              <h3>Nuevo libro</h3>
+              <h3>Formulario de escritor</h3>
             </div>
             <div class="card-body">
 
-              <form action="insert_libros.php" method="POST" class="row g-3" id="miFormulario">
-
-                  <div class="form-group">
-                  <label for="titulo">Título</label>
-                  <input type="text" name="titulo" id="titulo" class="form-control">
-                </div>
-
+              <form action="insert_escritor.php" method="POST"> <!--insert_escritor.php-->
                 <div class="form-group">
-                  <label for="isbn">ISBN</label>
-                  <input type="text" name="isbn" id="isbn" class="form-control">
+                  <label for="nombre_escritor">Nombre del escritor</label>
+                  <input type="text" name="nombre_escritor" id="titulo" class="form-control">
                 </div>
-                <div class="form-group col-md-4">
-                  <label for="fecha_publicacion">Fecha de publicación</label>
-                  <input type="numero" name="fecha_publicacion" id="fecha_publicacion" class="form-control">
+                <div class="form-group">
+                  <label for="apellido">Apellidos del escritor</label>
+                  <input type="text" name="apellido" id="apellido" class="form-control">
                 </div>
-
-                <div class="form-group col-md-3">
-                  <label for="id_escritor">Escritor</label>
-
-                  <select name="id_escritor" id="id_escritor" class="form-control form-select">
-                    <option disabled>--Selecciona un escritor--</option>
-
-                    <?php
-                    $sql = $conexion->query(
-                        "SELECT * FROM escritores ORDER BY nombre_escritor ASC",
-                    );
-                    while ($resultado = $sql->fetch_assoc()) {
-                        echo '<option value="' .
-                            $resultado["id_escritor"] .
-                            '">' .
-                            $resultado["nombre_escritor"] .
-                            " " .
-                            $resultado["apellido"] .
-                            "</option>";
-                    }
-                    ?>
-
-                  </select>
+                <div class="form-group">
+                  <label for="nacionalidad">Nacionalidad</label>
+                  <input type="text" name="nacionalidad" id="apellido" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="nacionalidad">Fecha de nacimiento</label>
+                  <input type="date" name="fecha_nacimiento" id="fecha_nacimiento" class="form-control">
                 </div>
 
-                <div class="form-group col-md-3">
-                  <label for="id_editorial">Editorial</label>
-
-                  <select name="id_editorial" id="id_editorial" class="form-control form-select">
-                    <option disabled>--Selecciona una editorial--</option>
-
-                    <?php
-                    $sql = $conexion->query(
-                        "SELECT * FROM editorial ORDER BY nombre_editorial ASC",
-                    );
-                    while ($resultado = $sql->fetch_assoc()) {
-                        echo '<option value="' .
-                            $resultado["id_editorial"] .
-                            '">' .
-                            $resultado["nombre_editorial"] .
-                            "</option>";
-                    }
-                    ?>
-                  </select>
-                </div>
-
-                <div class="form-group col-md-3">
-                  <label for="existencias">Existencias</label>
-                  <input type="number" name="existencias" id="existencias" class="form-control">
-                </div>
-
-                <div class="form-group col-md-3">
-                  <label for="existencias">Precio</label>
-                  <input type="number" name="precio" id="precio" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-primary mt-3 col-md-1 mr-3" >Guardar</button>
-                <a href="index.php" class="btn btn-secondary mt-3 col-md-1">Cancelar</a>
+                <button type="submit" class="btn btn-primary mt-3">Guardar</button>
+                <a href="escritores.php" class="btn btn-secondary mt-3">Cancelar</a>
               </form>
-
             </div>
           </div>
 
@@ -415,24 +377,50 @@
   <!-- Required Js -->
   <?php require_once "include/footer.php"; ?>
 
+  <div class="floting-button fixed bottom-[50px] right-[30px] z-[1030]">
+  </div>
+
+
   <script>
-  document.getElementById('miFormulario').addEventListener('submit', function(e) {
-      let titulo = document.getElementById('titulo').value.trim();
-      let isbn = document.getElementById('isbn').value.trim();
-      let escritor = document.getElementById('id_escritor').value;
-
-      if (titulo === "" || isbn === "" || escritor === "") {
-          e.preventDefault(); // Detiene el envío
-          alert("Por favor, rellena todos los campos obligatorios.");
-          return;
-      }
-
-      if (isNaN(document.getElementById('precio').value)) {
-          e.preventDefault();
-          alert("El precio debe ser un número válido.");
-      }
-  });
+    layout_change('false');
   </script>
+
+
+  <script>
+    layout_theme_sidebar_change('dark');
+  </script>
+
+
+  <script>
+    change_box_container('false');
+  </script>
+
+  <script>
+    layout_caption_change('true');
+  </script>
+
+  <script>
+    layout_rtl_change('false');
+  </script>
+
+  <script>
+    preset_change('preset-1');
+  </script>
+
+  <script>
+    main_layout_change('vertical');
+  </script>
+
+  <script>
+    function datoGuardado() {
+      Swal.fire({
+        title: "Datos guardados correctamente",
+        icon: "success",
+        draggable: true
+      });
+    }
+  </script>
+
 
 </body>
 <!-- [Body] end -->
